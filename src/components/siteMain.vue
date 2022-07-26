@@ -11,8 +11,35 @@
                 <span>When, while the lovely valley teems with vapour around meand the</span>
             </div>
 
-            <div class="row">
-                <div class="col-3"></div>
+            <div class="row text-center">
+                <div class="col-3">
+        
+                    <img class="w-50" src="../assets/img/Group-247.png" alt="Data Analysis">
+                    <h5>Data Analysis</h5>
+                    <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
+              
+                </div>
+                <div class="col-3">
+        
+                    <img class="w-50" src="../assets/img/Group-247.png" alt="Data Analysis">
+                    <h5>Data Analysis</h5>
+                    <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
+              
+                </div>
+                <div class="col-3">
+        
+                    <img class="w-50" src="../assets/img/Group-247.png" alt="Data Analysis">
+                    <h5>Data Analysis</h5>
+                    <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
+              
+                </div>
+                <div class="col-3">
+        
+                    <img class="w-50" src="../assets/img/Group-247.png" alt="Data Analysis">
+                    <h5>Data Analysis</h5>
+                    <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
+              
+                </div>
             </div>
 
             <button>View All Services</button>
@@ -37,6 +64,11 @@ export default {
 @import "../styles/variables.scss";
 @import "../styles/mixins.scss";
 
+div.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .ms_upper-txt{
     text-align: center;
@@ -58,9 +90,15 @@ export default {
     }
 }
 
+.col-3 h5{
+    font-weight: 600;
+    margin-top: 60px
+}
+
+
 button {
     @include buttonLayout;
     background-color: $colorText9;
-    text-align: center;
+    width: 12%;
 }
 </style>
