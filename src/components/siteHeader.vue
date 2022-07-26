@@ -10,8 +10,8 @@
             <div class="ms_nav-list">
 
                 <ul>
-                    <li v-for="(link, index) in headerNavLinks" :key="index"> {{link.text}}</li>
-                    
+                    <li v-for="(link, index) in headerNavLinks" :key="index"> {{ link.text }}</li>
+
                 </ul>
 
                 <button>
@@ -21,8 +21,30 @@
             </div>
         </nav>
 
-        <div class="ms_hero">
+        <div class="container ms_hero">
+            <div class="row align-items-center">
+                <div class="col-5 ">
 
+                    <div class="text-white">
+                        <h1>Business Planning</h1>
+                        <h1>Digital Technology</h1>
+                        <h1>Modern Solution</h1>
+                    </div>
+
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, odit deserunt cum veniam
+                        quaerat quisquam eos, maiores unde optio esse nemo ipsum.</p>
+
+                    <div class="ms_hero-btns">
+                        <button>Try it Now</button>
+                        <button>Explore More</button>
+                    </div>
+                </div>
+
+                <div class="col-7">
+                    <img src="../assets/img/header.png" alt="Hero pic">
+                </div>
+            </div>
         </div>
 
     </header>
@@ -31,32 +53,32 @@
 <script>
 export default {
 
-    data: function() {
-    return{
+    data: function () {
+        return {
 
-      headerNavLinks: [
-            {
-                text: 'Home',
-                url: '#',
-            },{
-                text: 'About',
-                url: '#',
-            },{
-                text: 'Services',
-                url: '#',
-            },{
-                text: 'Blog',
-                url: '#',
-            },{
-                text: 'Contact',
-                url: '#',
-            },{
-                text: 'Portfolio',
-                url: '#',
-            },
-        ],
-    }
-  },
+            headerNavLinks: [
+                {
+                    text: 'Home',
+                    url: '#',
+                }, {
+                    text: 'About',
+                    url: '#',
+                }, {
+                    text: 'Services',
+                    url: '#',
+                }, {
+                    text: 'Blog',
+                    url: '#',
+                }, {
+                    text: 'Contact',
+                    url: '#',
+                }, {
+                    text: 'Portfolio',
+                    url: '#',
+                },
+            ],
+        }
+    },
 
 
 }
@@ -67,52 +89,62 @@ export default {
 <style lang="scss">
 @import "../styles/general.scss";
 @import "../styles/variables.scss";
+@import "../styles/mixins.scss";
 
 
-header{
+// TOP HEADER 
+
+header {
     background-color: $colorBg9;
 }
 
-nav.ms_top-header{
+nav.ms_top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.ms_logo-container img{
+.ms_logo-container img {
     width: 75%;
     padding: 15px 0;
-    
+
 }
 
-.ms_nav-list{
+.ms_nav-list {
     display: flex;
     align-items: center;
-    
 
-    ul{
+
+    ul {
         list-style: none;
         margin: 0 30px;
-        
 
-        li{
-           display: inline-block; 
-           margin: 0 10px;
-           color: white;
-           font-size: 0.9rem;
 
-           
+        li {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            font-size: 0.9rem;
+
+
         }
 
     }
 
-    button{
-        border: none;
-        border-radius: 20px;
-        padding: 6px 18px;
-        font-size: 0.9rem;
+    button {
+        @include buttonLayout;
         background-color: $colorBg3;
     }
 }
+
+// HERO
+
+.ms_hero-btns button{
+    @include buttonLayout;
+    
+
+}
+
+
 
 </style>
