@@ -11,7 +11,7 @@
                 <span>When, while the lovely valley teems with vapour around meand the</span>
             </div>
 
-            <div class="row text-center">
+            <div class="row">
                 <div class="col-3">
         
                     <img class="w-50" src="../assets/img/Group-247.png" alt="Data Analysis">
@@ -90,9 +90,23 @@ div.container{
     }
 }
 
-.col-3 h5{
-    font-weight: 600;
-    margin-top: 60px
+.col-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h5{
+        font-weight: 600;
+        margin-top: 60px
+    }
+
+    p{
+        font-size: 0.8rem;
+        margin-top: 20px;
+        font-weight: 300;
+        width: 70%;
+        text-align: center;
+    }
 }
 
 
@@ -100,5 +114,7 @@ button {
     @include buttonLayout;
     background-color: $colorText9;
     width: 12%;
+    margin-top: 150px;
+    margin-bottom: 90px;
 }
 </style>
