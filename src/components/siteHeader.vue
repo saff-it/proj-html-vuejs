@@ -99,7 +99,7 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../styles/general.scss";
 @import "../styles/variables.scss";
 @import "../styles/mixins.scss";

@@ -12,8 +12,7 @@
                 </div>
 
                 <div class="row">
-                    <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index"
-                    :singleCard="card" />
+                    <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index" :singleCard="card" />
                 </div>
 
                 <button>View All Services</button>
@@ -22,11 +21,34 @@
         </section>
 
         <!-- grow your business section  -->
+        <section class="ms_grow-business">
+            <div class="container ms_hero">
+                <div class="row align-items-center">
 
-        <section></section>
+                    <div class="col-7">
+                        <img src="../assets/img/men-data.png" alt="Hero pic">
+                    </div>
 
+                    <div class="col-5">
 
+                        <div class="ms_title-txt text-white">
+                            <span>Start your Project</span>
+                            <h1 class="fw-bolder mt-3">Grow your Business</h1>
+                            <h1 class="fw-lighter">With our Strategy</h1>
+                        </div>
 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, odit deserunt cum veniam
+                            quaerat quisquam eos.</p>
+
+                        <div class="ms_hero-btns">
+                            <button class="ms_btn-left">Try it Now</button>
+                            <button class="ms_btn-right">Explore More</button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
 
     </main>
 </template>
@@ -83,6 +105,8 @@ div.container {
     align-items: center;
 }
 
+// WHAT WE DO SECTION
+
 .ms_upper-txt {
     text-align: center;
     margin: 70px;
@@ -103,8 +127,6 @@ div.container {
     }
 }
 
-
-
 button {
     @include buttonLayout;
     background-color: $colorText9;
@@ -112,4 +134,40 @@ button {
     margin-top: 150px;
     margin-bottom: 90px;
 }
+
+// GROW YOUR BUSINESS SECTION
+
+section.ms_grow-business{
+    background-color: $colorBg9;
+}
+
+.col-5 div.ms_title-txt span{
+    font-size: 0.8rem;
+}
+
+.col-5 p {
+    color: $colorBg3;
+    width: 60%;
+    font-size: 0.7rem;
+    margin: 30px 0;
+}
+
+.col-7 img {
+    transform: scale(60%)
+}
+
+.ms_hero-btns button {
+    @include buttonLayout;
+    margin: 15px 15px 0 0;
+    width: 30%;
+}
+
+button.ms_btn-left {
+    background-color: $colorText9;
+}
+
+button.ms_btn-right {
+    background-color: $colorBg3;
+}
+
 </style>
