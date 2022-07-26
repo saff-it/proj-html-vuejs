@@ -12,13 +12,18 @@
                 </div>
 
                 <div class="row">
-                    <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index" :singleCard="card" />
+                    <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index"
+                    :singleCard="card" />
                 </div>
 
                 <button>View All Services</button>
 
             </div>
         </section>
+
+        <!-- grow your business section  -->
+
+        <section></section>
 
 
 
@@ -40,7 +45,7 @@ export default {
         return {
 
             whatWeDoCards: [
-                
+
                 {
                     title: 'Data Analysis',
                     pic: '../assets/img/Group-247.png',
