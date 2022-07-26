@@ -10,9 +10,8 @@
             <div class="ms_nav-list">
 
                 <ul>
-                    <li>casa</li>
-                    <li>casa</li>
-                    <li>casa</li>
+                    <li v-for="(link, index) in headerNavLinks" :key="index"> {{link.text}}</li>
+                    
                 </ul>
 
                 <button>
@@ -32,7 +31,37 @@
 <script>
 export default {
 
+    data: function() {
+    return{
+
+      headerNavLinks: [
+            {
+                text: 'Home',
+                url: '#',
+            },{
+                text: 'About',
+                url: '#',
+            },{
+                text: 'Services',
+                url: '#',
+            },{
+                text: 'Blog',
+                url: '#',
+            },{
+                text: 'Contact',
+                url: '#',
+            },{
+                text: 'Portfolio',
+                url: '#',
+            },
+        ],
+    }
+  },
+
+
 }
+
+
 </script>
 
 <style lang="scss">
@@ -70,6 +99,8 @@ nav.ms_top-header{
            display: inline-block; 
            margin: 0 10px;
            color: white;
+           font-size: 0.9rem;
+
            
         }
 

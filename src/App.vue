@@ -12,6 +12,7 @@ import siteHeader from './components/siteHeader.vue'
 import siteMain from './components/siteMain.vue'
 import siteFooter from './components/siteFooter.vue'
 
+
 export default {
   name: 'App',
   components: {
@@ -19,9 +20,13 @@ export default {
     siteMain,
     siteFooter,
 
-  }
+  },
+
+  
 }
 </script>
+
+
 
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap.scss";
