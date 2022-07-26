@@ -97,18 +97,15 @@ nav.ms_top-header {
 .ms_logo-container img {
     width: 75%;
     padding: 15px 0;
-
 }
 
 .ms_nav-list {
     display: flex;
     align-items: center;
 
-
     ul {
         list-style: none;
         margin: 0 30px;
-
 
         li {
             display: inline-block;
@@ -123,7 +120,5 @@ nav.ms_top-header {
         background-color: $colorBg3;
     }
 }
-
-
 
 </style>

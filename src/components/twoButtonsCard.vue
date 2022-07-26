@@ -9,7 +9,6 @@
                         <h1 class="fw-bolder">Modern Solution</h1>
                     </div>
 
-
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, odit deserunt cum veniam
                         quaerat quisquam eos.</p>
 
@@ -47,7 +46,6 @@ export default {
     width: 60%;
     font-size: 0.7rem;
     margin: 30px 0;
-
 }
 
 .col-7 img {
@@ -57,7 +55,6 @@ export default {
 .ms_hero-btns button {
     @include buttonLayout;
     margin: 15px 15px 0 0;
-    color: white;
 }
 
 button.ms_btn-left {
