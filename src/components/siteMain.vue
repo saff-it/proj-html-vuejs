@@ -3,7 +3,7 @@
 
         <!-- what we do section  -->
         <section>
-            <div class="container">
+            <div class="container ms_we-do-container">
 
                 <div class="ms_upper-txt">
                     <span>Our Services</span>
@@ -136,38 +136,56 @@
 
 
             <div class="container ms_posts-box">
-                <div class="row">
+                <div class="row justify-content-center">
 
                     <div class="col-3 ms_post-cards">
+
                         <div class="ms_post-card">
-                            <span>April 21, 2019 - Paul</span>
-                            <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                            <p>When, while the lovely valley teems with vapour around meand the</p>
-                            <button>Read More</button>
+                            <div class="mt-3">
+                                <span>April 21, 2019 - Paul</span>
+                                <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
+                                <p>When, while with le the lovely valley teems with vapouaround meand the</p>
+                            </div>
+                            
+                            <div>
+                                <button>Read More</button>
+                            </div>
+                            
                         </div>
+
+                    </div>
+
+                    <div class="col-3 ms_post-cards">
+
+                        <div class="ms_post-card">
+                            <div class="mt-3">
+                                <span>April 21, 2019 - Paul</span>
+                                <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
+                                <p>When, while with le the lovely valley teems with vapouaround meand the</p>
+                            </div>
+                            
+                            <div>
+                                <button>Read More</button>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 ms_post-cards-wide">
 
                         <div class="ms_post-card">
                             <span>April 21, 2019 - Paul</span>
                             <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                            <p>When, while the lovely valley teems with vapour around meand the</p>
-                            <button>Read More</button>
-                        </div>
-
-                        <div class="ms_post-card">
-                            <span>April 21, 2019 - Paul</span>
-                            <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                            <p>When, while the lovely valley teems with vapour around meand the</p>
-                            <button>Read More</button>
-                        </div>
-
-                        <div class="ms_post-card">
-                            <span>April 21, 2019 - Paul</span>
-                            <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                            <p>When, while the lovely valley teems with vapour around meand the</p>
+                            <p>When, while  with le the lovely valley teems with vapour around
+                                meand the</p>
                             <button>Read More</button>
                         </div>
 
                     </div>
+
+
+
 
                 </div>
             </div>
@@ -278,8 +296,10 @@ export default {
 @import "../styles/variables.scss";
 @import "../styles/mixins.scss";
 
-div.container {
-    @include displayFlexToColumn;
+.container.ms_we-do-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
 }
 
@@ -357,7 +377,7 @@ section.ms_carousel-bg {
 
 .ms_carousel-bar {
     width: 100%;
-    margin: 110px 0 40px 0;
+    padding: 110px 0 0 0;
     @include displayFlex;
 
 
@@ -390,8 +410,9 @@ section.ms_carousel-bg {
 }
 
 .ms_carousel-slider {
-    margin: 50px 0 40px 0;
+    padding: 50px 0 40px 0;
     color: $colorBg2;
+    text-align: center;
 
     i {
         padding: 3px;
@@ -416,7 +437,7 @@ section.ms_carousel-bg {
 .ms_pricing-cards-cont {
     position: absolute;
     top: 260px;
-    left: 10%;
+    left: 15%;
 
 }
 
@@ -461,8 +482,6 @@ section.ms_carousel-bg {
 
 .ms_post-cards {
     display: flex;
-    flex-direction: row;
-    width: 100%;
 
     .ms_post-card {
         display: flex;
@@ -470,13 +489,73 @@ section.ms_carousel-bg {
         align-items: left;
         background-color: $colorBg9;
         color: white;
-        padding: 50px 40px;
-        margin: 0 20px;
+        padding: 25px 40px;
+        margin: 0 5px;
         border-radius: 20px;
+
+        span {
+            font-size: 0.7rem;
+            font-weight: lighter;
+        }
+
+        h6 {
+            margin: 20px 0;
+        }
+
+        p {
+            width: 100%;
+            text-align: left;
+            font-size: 0.7rem;
+            margin: 0;
+
+        }
 
         button {
             @include buttonLayout;
             color: black;
+            width: 70%;
+            margin-top: 40px;
+        }
+    }
+
+}
+
+.ms_post-cards-wide {
+    display: flex;
+
+    .ms_post-card {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        background-color: $colorBg9;
+        color: white;
+        padding: 25px 40px;
+        margin: 0 5px;
+        border-radius: 20px;
+
+        span {
+            font-size: 0.7rem;
+            font-weight: lighter;
+            margin-top: 20px;
+        }
+
+        h6 {
+            margin: 20px 0;
+        }
+
+        p {
+            width: 90%;
+            text-align: left;
+            font-size: 0.7rem;
+            margin: 0;
+
+        }
+
+        button {
+            @include buttonLayout;
+            color: black;
+            width: 60%;
+            margin-top: 40px;
         }
     }
 
