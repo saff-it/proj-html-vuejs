@@ -12,8 +12,7 @@
                 </div>
 
                 <div class="row">
-                    <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index"
-                    :singleCardWeDo="card" />
+                    <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index" :singleCardWeDo="card" />
                 </div>
 
                 <button class="ms-wwd-btn">View All Services</button>
@@ -74,15 +73,23 @@
                         </div>
 
                     </div>
+
                 </div>
 
-                
+
                 <div class="row ms_carousel-cards">
-                    <carouselCard v-for="(card, index) in carouselCards" :key="index"
-                    :singleCarouselCard="card"/>
-                    
+                    <carouselCard v-for="(card, index) in carouselCards" :key="index" :singleCarouselCard="card" />
+
                 </div>
-               
+
+                <div class="ms_carousel-slider">
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+
 
             </div>
 
@@ -233,11 +240,11 @@ button.ms_btn-right {
 
 // CAROUSEL SECTION 
 
-section.ms_carousel-bg{
+section.ms_carousel-bg {
     background-color: $colorText3;
 }
 
-.ms_carousel-bar{
+.ms_carousel-bar {
     width: 100%;
     margin: 110px 0 40px 0;
     @include displayFlex;
@@ -258,21 +265,33 @@ section.ms_carousel-bg{
     }
 }
 
-.ms_carousel-bar-btns{
+.ms_carousel-bar-btns {
     @include displayFlex;
 
     .ms_caro-btn-lft,
-    .ms_caro-btn-rgt{
+    .ms_caro-btn-rgt {
         font-size: 0.9rem;
         border: 1px solid $colorText9;
         color: $colorText9;
         padding: 10px 14px;
         border-radius: 50%;
-        
+
     }
 
 }
 
 
+.ms_carousel-slider {
+    margin: 50px 0 40px 0;
+    color: $colorBg2;
 
+    i {
+        padding: 3px;
+        font-size: 0.5rem;
+    }
+}
+
+.ms_carousel-slider i:first-child{
+    color: $colorText9;
+}
 </style>
