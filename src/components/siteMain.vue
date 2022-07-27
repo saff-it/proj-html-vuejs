@@ -114,7 +114,6 @@
                         <PricingCard v-for="(card, index) in pricingCards" :key="index" :class="addSpecialClass(index)"
                             :singlePricingCard="card" />
 
-
                     </div>
                 </div>
             </div>
@@ -123,15 +122,57 @@
 
         <!-- latest posts section  -->
         <section class="ms_posts-section">
-            <div class="container ms_posts-container">
+
+            <div class="container ms_posts-text">
 
                 <div class="ms_pricing-txt">
                     <span>Price List</span>
                     <h2 class="text-dark"> <span class="ms_bolder-txt">Our</span> Pricing </h2>
-                    <span class="ms_pricing-span-sizing text-dark">When, while the lovely valley teems with vapour around meanthe while the lovely valley teems with vapou</span>
+                    <span class="ms_pricing-span-sizing text-dark">When, while the lovely valley teems with vapour
+                        around meanthe while the lovely valley teems with vapou</span>
                 </div>
 
             </div>
+
+
+            <div class="container ms_posts-box">
+                <div class="row">
+
+                    <div class="col-3 ms_post-cards">
+                        <div class="ms_post-card">
+                            <span>April 21, 2019 - Paul</span>
+                            <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
+                            <p>When, while the lovely valley teems with vapour around meand the</p>
+                            <button>Read More</button>
+                        </div>
+
+                        <div class="ms_post-card">
+                            <span>April 21, 2019 - Paul</span>
+                            <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
+                            <p>When, while the lovely valley teems with vapour around meand the</p>
+                            <button>Read More</button>
+                        </div>
+
+                        <div class="ms_post-card">
+                            <span>April 21, 2019 - Paul</span>
+                            <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
+                            <p>When, while the lovely valley teems with vapour around meand the</p>
+                            <button>Read More</button>
+                        </div>
+
+                        <div class="ms_post-card">
+                            <span>April 21, 2019 - Paul</span>
+                            <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
+                            <p>When, while the lovely valley teems with vapour around meand the</p>
+                            <button>Read More</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
         </section>
 
     </main>
@@ -410,11 +451,34 @@ section.ms_carousel-bg {
 
 // POSTS SECTION 
 
-.ms_posts-section{
+.ms_posts-section {
     background-color: #F0F0F0;
 
-    .ms_posts-container{
+    .ms_posts-text {
         padding-top: 400px;
     }
+}
+
+.ms_post-cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .ms_post-card {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        background-color: $colorBg9;
+        color: white;
+        padding: 50px 40px;
+        margin: 0 20px;
+        border-radius: 20px;
+
+        button {
+            @include buttonLayout;
+            color: black;
+        }
+    }
+
 }
 </style>
