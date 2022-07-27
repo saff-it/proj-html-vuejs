@@ -110,18 +110,11 @@
 
             <div class="container ms_pricing-cards-cont">
                 <div class="row">
-                    <div class="col-4 w-100">
-
-                        <div class="ms_pricing-card">
-                            <h3>Designing</h3>
-                            <span class="ms_pricing-subtit">process</span>
-                            <span class="ms_pricing-dollar">$</span>
-                            <span class="ms_price-numb">40</span>
-                            <span class="ms_price-per-month">40</span>
-
-                            <button class="ms_pricing-btn">Order Now <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
+                    <div class="col-4 w-100 d-flex">
+                        <PricingCard v-for="(card, index) in pricingCards" :key="index"
+                        :singlePricingCard="card"
+                    />
+                        
                         
                     </div>
                 </div>
@@ -135,13 +128,14 @@
 <script>
 import whatWeDoCard from './whatWeDoCard.vue'
 import carouselCard from './carouselCard.vue'
+import PricingCard from './pricingCard.vue'
 
 export default {
     name: 'siteMain',
     components: {
-        whatWeDoCard,
-        carouselCard,
-
+    whatWeDoCard,
+    carouselCard,
+    PricingCard
     },
 
     data: function () {
@@ -186,6 +180,25 @@ export default {
                     type: "Branding Strategy",
                 },
 
+            ],
+
+            pricingCards: [
+
+                {
+                    title: 'Designing',
+                    subTitle: "process",
+                    price: "40",
+                },
+                {
+                    title: 'Developing',
+                    subTitle: "product",
+                    price: "60",
+                },
+                {
+                    title: 'Supporting',
+                    subTitle: "clients",
+                    price: "80",
+                },
             ],
         }
     },
@@ -362,21 +375,4 @@ section.ms_carousel-bg {
     }
 }
 
-// card 
-
-.ms_pricing-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    padding: 40px 80px;
-    border-radius: 20px;
-
-    button{
-    @include buttonLayout;
-    background-color: $colorText9;
-
-    }
-
-}
 </style>
