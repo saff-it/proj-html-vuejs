@@ -136,7 +136,7 @@
 
 
             <div class="container ms_posts-box">
-                <div class="row justify-content-center">
+                <div class="row">
 
                     <div class="col-3 ms_post-cards">
 
@@ -175,14 +175,21 @@
                     <div class="col-6 ms_post-cards-wide">
 
                         <div class="ms_post-card">
-                            <span>April 21, 2019 - Paul</span>
-                            <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                            <p>When, while  with le the lovely valley teems with vapour around
-                                meand the</p>
-                            <button>Read More</button>
+                            <div class="mt-3 ms_txt-post">
+                                <span>April 21, 2019 - Paul</span>
+                                <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
+                                <p>When, while with le the lovely valley teems with vapouaround meand the</p>
+                            </div>
+                            
+                            <div>
+                                <button>Read More</button>
+                            </div>
+                            
                         </div>
 
                     </div>
+
+                    
 
 
 
@@ -437,7 +444,7 @@ section.ms_carousel-bg {
 .ms_pricing-cards-cont {
     position: absolute;
     top: 260px;
-    left: 15%;
+    left: 16%;
 
 }
 
@@ -474,6 +481,7 @@ section.ms_carousel-bg {
 
 .ms_posts-section {
     background-color: #F0F0F0;
+    
 
     .ms_posts-text {
         padding-top: 400px;
@@ -482,6 +490,7 @@ section.ms_carousel-bg {
 
 .ms_post-cards {
     display: flex;
+    
 
     .ms_post-card {
         display: flex;
@@ -503,7 +512,7 @@ section.ms_carousel-bg {
         }
 
         p {
-            width: 100%;
+            width: 90%;
             text-align: left;
             font-size: 0.7rem;
             margin: 0;
@@ -522,12 +531,14 @@ section.ms_carousel-bg {
 
 .ms_post-cards-wide {
     display: flex;
+    
 
     .ms_post-card {
         display: flex;
-        flex-direction: column;
-        align-items: left;
-        background-color: $colorBg9;
+        align-items: flex-end;
+        justify-content: space-between;
+        background-image: url('../assets/img/headway-537308-unsplash-1380x703.jpg');
+        background-size: cover;
         color: white;
         padding: 25px 40px;
         margin: 0 5px;
@@ -548,16 +559,21 @@ section.ms_carousel-bg {
             text-align: left;
             font-size: 0.7rem;
             margin: 0;
-
         }
 
         button {
             @include buttonLayout;
             color: black;
-            width: 60%;
+            width: 100%;
             margin-top: 40px;
+
         }
     }
 
+    .ms_txt-post{
+        width: 65%;
+    }
+
 }
+
 </style>
