@@ -50,6 +50,11 @@
             </div>
         </section>
 
+        <!-- latest work carousel  -->
+        <section>
+            
+        </section>
+
     </main>
 </template>
 
