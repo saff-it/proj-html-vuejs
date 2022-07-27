@@ -1,8 +1,8 @@
 <template>
     <div class="col-3">
 
-        <img class="w-50" :src="singleCard.pic" :alt="singleCard.title">
-        <h5>{{singleCard.title}}</h5>
+        <img class="w-50" :src="singleCardWeDo.pic" :alt="singleCardWeDo.title">
+        <h5>{{singleCardWeDo.title}}</h5>
         <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
 
     </div>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    props: ['singleCard'],
+    props: ['singleCardWeDo'],
 }
 </script>
 

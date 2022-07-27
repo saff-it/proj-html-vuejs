@@ -12,7 +12,8 @@
                 </div>
 
                 <div class="row">
-                    <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index" :singleCard="card" />
+                    <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index"
+                    :singleCardWeDo="card" />
                 </div>
 
                 <button>View All Services</button>
@@ -59,19 +60,9 @@
 
                 
                 <div class="row ms_carousel-cards">
-
-                    <div class="col-4 ms_carousel-card">
-
-                        <div class="ms_card-img">
-                            <img class="w-100" src="../assets/img/8wa60okr-1-790x576.jpg" alt="">
-                        </div>
-
-                        <div class="ms_card-txt">
-                            <span class="ms_card-txt-sx">Basket of Flower on table</span>
-                            <span class="ms_card-txt-dx">Branding Strategy</span>
-                        </div>
-
-                    </div>
+                    <carouselCard v-for="(card, index) in carouselCards" :key="index"
+                    :singleCarouselCard="card"/>
+                    
                 </div>
                
 
@@ -84,11 +75,13 @@
 
 <script>
 import whatWeDoCard from './whatWeDoCard.vue'
+import carouselCard from './carouselCard.vue'
 
 export default {
     name: 'siteMain',
     components: {
         whatWeDoCard,
+        carouselCard,
 
     },
 
@@ -112,6 +105,26 @@ export default {
                 {
                     title: 'Branding Strategy',
                     pic: '../assets/img/Group-566.png',
+                },
+
+            ],
+
+            carouselCards: [
+
+                {
+                    img: '../assets/img/8wa60okr-1-790x576.jpg',
+                    title: "Basket of Flower on table",
+                    type: "Branding Strategy",
+                },
+                {
+                    img: '../assets/img/DRY-1-790x576.jpg',
+                    title: "Purinky Products",
+                    type: "Digital Experience",
+                },
+                {
+                    img: '../assets/img/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
+                    title: "Satisfy Poster",
+                    type: "Branding Strategy",
                 },
 
             ],
@@ -200,34 +213,5 @@ button.ms_btn-right {
 }
 
 
-// CAROUSEL SECTION
-
-.ms_card-img img{
-    border-radius: 20px;
-}
-
-.ms_card-txt{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .ms_card-txt-sx{
-        padding: 25px;
-        font-weight: bold;
-    }
-
-    .ms_card-txt-dx{
-        padding: 20px;
-        font-size: 0.9rem;
-        color: $colorText11;
-    }
-}
-
-.ms_carousel-card{
-    background-color: $colorBg2;
-    padding: 0;
-    border-radius: 25px;
-
-}
 
 </style>
