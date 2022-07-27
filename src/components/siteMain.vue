@@ -96,13 +96,54 @@
 
         <!-- pricing section  -->
         <section class="ms_pricing-bg">
+            <div class="container">
 
-            <div class="ms_pricing-txt">
-                <span>Price List</span>
-                <h2> <span class="ms_bolder-txt text-white">Our</span> Pricing </h2>
-                <span class="ms_pricing-span-sizing">When, while the lovely valley teems with vapour around meand the  while the lovely valley teems with vapou</span>
+                <div class="ms_pricing-txt">
+                    <span>Price List</span>
+                    <h2> <span class="ms_bolder-txt text-white">Our</span> Pricing </h2>
+                    <span class="ms_pricing-span-sizing">When, while the lovely valley teems with vapour around meand
+                        the while the lovely valley teems with vapou</span>
+                </div>
+                
+                <div class="ms_pricing-cards-cont">
+                    <div class="row">
+
+                        <div class="col-4 ms_pricing-card">
+                            <h3>Designing</h3>
+                            <span class="ms_pricing-subtit">process</span>
+                            <span class="ms_pricing-dollar">$</span>
+                            <span class="ms_price-numb">40</span>
+                            <span class="ms_price-per-month">40</span>
+
+                            <button class="ms_pricing-btn">Order Now <i class="fa-solid fa-arrow-right"></i> </button>
+
+                        </div>
+
+                        <div class="col-4 ms_pricing-card">
+                            <h3>Designing</h3>
+                            <span class="ms_pricing-subtit">process</span>
+                            <span class="ms_pricing-dollar">$</span>
+                            <span class="ms_price-numb">40</span>
+                            <span class="ms_price-per-month">40</span>
+
+                            <button class="ms_pricing-btn">Order Now <i class="fa-solid fa-arrow-right"></i> </button>
+
+                        </div>
+
+                        <div class="col-4 ms_pricing-card">
+                            <h3>Designing</h3>
+                            <span class="ms_pricing-subtit">process</span>
+                            <span class="ms_pricing-dollar">$</span>
+                            <span class="ms_price-numb">40</span>
+                            <span class="ms_price-per-month">40</span>
+
+                            <button class="ms_pricing-btn">Order Now <i class="fa-solid fa-arrow-right"></i> </button>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
 
         </section>
 
@@ -285,9 +326,7 @@ section.ms_carousel-bg {
         color: $colorText9;
         padding: 10px 14px;
         border-radius: 50%;
-
     }
-
 }
 
 .ms_carousel-slider {
@@ -307,7 +346,7 @@ section.ms_carousel-bg {
 
 // PRICING SECTION 
 
-.ms_pricing-bg{
+.ms_pricing-bg {
     background-color: $colorBg9;
 
 }
@@ -316,18 +355,18 @@ section.ms_carousel-bg {
     @include displayFlexToColumn;
     color: white;
     padding: 60px 0;
-    
+
 
     span:first-child {
         color: $colorText9;
     }
 
-   .ms_pricing-span-sizing{
-    font-size: 0.8rem;
-    width: 45%;
-    text-align: center;
-    
-   }
+    .ms_pricing-span-sizing {
+        font-size: 0.8rem;
+        width: 80%;
+        text-align: center;
+
+    }
 
     h2 {
         font-size: 3rem;
@@ -341,5 +380,10 @@ section.ms_carousel-bg {
     }
 }
 
+// card 
 
+.col-4.ms_pricing-card{
+    @include displayFlexToColumn;
+    background-color: white;
+}
 </style>
