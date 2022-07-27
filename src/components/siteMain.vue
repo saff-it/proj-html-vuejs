@@ -126,8 +126,8 @@
             <div class="container ms_posts-text">
 
                 <div class="ms_pricing-txt">
-                    <span>Price List</span>
-                    <h2 class="text-dark"> <span class="ms_bolder-txt">Our</span> Pricing </h2>
+                    <span>Blog</span>
+                    <h2 class="text-dark"> <span class="ms_bolder-txt">Latest</span> Posts </h2>
                     <span class="ms_pricing-span-sizing text-dark">When, while the lovely valley teems with vapour
                         around meanthe while the lovely valley teems with vapou</span>
                 </div>
@@ -137,63 +137,10 @@
 
             <div class="container ms_posts-box">
                 <div class="row">
-
-                    <div class="col-3 ms_post-cards">
-
-                        <div class="ms_post-card">
-                            <div class="mt-3">
-                                <span>April 21, 2019 - Paul</span>
-                                <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                                <p>When, while with le the lovely valley teems with vapouaround meand the</p>
-                            </div>
-                            
-                            <div>
-                                <button>Read More</button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-
-                    <div class="col-3 ms_post-cards">
-
-                        <div class="ms_post-card">
-                            <div class="mt-3">
-                                <span>April 21, 2019 - Paul</span>
-                                <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                                <p>When, while with le the lovely valley teems with vapouaround meand the</p>
-                            </div>
-                            
-                            <div>
-                                <button>Read More</button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-
-                    <div class="col-6 ms_post-cards-wide">
-
-                        <div class="ms_post-card">
-                            <div class="mt-3 ms_txt-post">
-                                <span>April 21, 2019 - Paul</span>
-                                <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                                <p>When, while with le the lovely valley teems with vapouaround meand the</p>
-                            </div>
-                            
-                            <div>
-                                <button>Read More</button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-
-                    
-
-
-
-
+                    <postCard v-for="(card, index) in postCards" :key="index"
+                    :singlePostCard="card"
+                    :class="addSpecialClassToPost(index)"
+                />
                 </div>
             </div>
 
@@ -207,13 +154,15 @@
 import whatWeDoCard from './whatWeDoCard.vue'
 import carouselCard from './carouselCard.vue'
 import PricingCard from './pricingCard.vue'
+import postCard from './postCard.vue'
 
 export default {
     name: 'siteMain',
     components: {
         whatWeDoCard,
         carouselCard,
-        PricingCard
+        PricingCard,
+        postCard,
     },
 
     data: function () {
@@ -278,6 +227,23 @@ export default {
                     price: "80",
                 },
             ],
+
+            postCards: [
+
+                {
+                    title: 'Amazon gets CCI not to acquire 49% stake in',
+                    paragraph: "When, while with le the lovely valley teems with vapouaround meand the",
+                },
+                {
+                    title: 'Clearing Corporations get SEBI nod to invest in overnight funds',
+                    paragraph: "When, while with le the lovely valley teems with vapouaround meand the",
+                },
+                {
+                    title: 'Shabnam Dhillion, wife of RSSb chief Gurinder Dhollon, passes away London',
+                    paragraph: "When, while with le the lovely valley teems with vapouaround meand the",
+                },
+                
+            ],
         }
     },
 
@@ -290,6 +256,18 @@ export default {
             }
 
             return cssClass;
+        },
+
+        addSpecialClassToPost(indexActive) {
+            let cssPostClass = '';
+
+            if (indexActive === 0) {
+                cssPostClass = 'col-6 ms_post-cards-wide';
+            } else {
+                cssPostClass = 'col-3 ms_post-cards';
+            }
+
+            return cssPostClass;
         }
     }
 
@@ -486,94 +464,6 @@ section.ms_carousel-bg {
     .ms_posts-text {
         padding-top: 400px;
     }
-}
-
-.ms_post-cards {
-    display: flex;
-    
-
-    .ms_post-card {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        background-color: $colorBg9;
-        color: white;
-        padding: 25px 40px;
-        margin: 0 5px;
-        border-radius: 20px;
-
-        span {
-            font-size: 0.7rem;
-            font-weight: lighter;
-        }
-
-        h6 {
-            margin: 20px 0;
-        }
-
-        p {
-            width: 90%;
-            text-align: left;
-            font-size: 0.7rem;
-            margin: 0;
-
-        }
-
-        button {
-            @include buttonLayout;
-            color: black;
-            width: 70%;
-            margin-top: 40px;
-        }
-    }
-
-}
-
-.ms_post-cards-wide {
-    display: flex;
-    
-
-    .ms_post-card {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        background-image: url('../assets/img/headway-537308-unsplash-1380x703.jpg');
-        background-size: cover;
-        color: white;
-        padding: 25px 40px;
-        margin: 0 5px;
-        border-radius: 20px;
-
-        span {
-            font-size: 0.7rem;
-            font-weight: lighter;
-            margin-top: 20px;
-        }
-
-        h6 {
-            margin: 20px 0;
-        }
-
-        p {
-            width: 90%;
-            text-align: left;
-            font-size: 0.7rem;
-            margin: 0;
-        }
-
-        button {
-            @include buttonLayout;
-            color: black;
-            width: 100%;
-            margin-top: 40px;
-
-        }
-    }
-
-    .ms_txt-post{
-        width: 65%;
-    }
-
 }
 
 </style>
