@@ -343,7 +343,16 @@ section.ms_carousel-bg {
 
 .ms_pricing-bg {
     background-color: $colorBg9;
+    position: relative;
+    height: 500px;
 
+}
+
+.ms_pricing-cards-cont{
+    position: absolute;
+    top: 300px;
+    left: 10%;
+    
 }
 
 .ms_pricing-txt {
