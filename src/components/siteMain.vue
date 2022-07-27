@@ -112,6 +112,7 @@
                 <div class="row">
                     <div class="col-4 w-100 d-flex">
                         <PricingCard v-for="(card, index) in pricingCards" :key="index"
+                        :class="addSpecialClass(index)"
                         :singlePricingCard="card"
                     />
                         
@@ -202,6 +203,18 @@ export default {
             ],
         }
     },
+
+    methods: {
+        addSpecialClass(indexActive) {
+            let cssClass = '';
+
+            if (indexActive === 1){
+                cssClass = 'special';
+            }
+
+            return cssClass;
+        }
+    }
 
 
 
@@ -350,7 +363,7 @@ section.ms_carousel-bg {
 
 .ms_pricing-cards-cont{
     position: absolute;
-    top: 300px;
+    top: 260px;
     left: 10%;
     
 }

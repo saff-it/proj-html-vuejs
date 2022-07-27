@@ -10,7 +10,8 @@
 
         <ul>
             <li v-for="(item, index) in pricingCardListItems" :key="index">
-            <span>{{item.itemBold}}</span> {{item.itemNormal}}</li>
+                <span>{{item.itemBold}}</span> {{item.itemNormal}}
+            </li>
         </ul>
 
         <button class="ms_pricing-btn">Order Now <i class="fa-solid fa-arrow-right ms-4"></i> </button>
@@ -54,7 +55,7 @@ export default {
         }
     },
 
-
+    
 }
 
 
@@ -70,7 +71,7 @@ export default {
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding: 40px 80px;
+    padding: 40px 90px;
     margin: 0 18px;
     border-radius: 20px;
     position: relative;
@@ -137,4 +138,20 @@ export default {
     }
 
 }
+
+.special{
+    background-color: $colorText12;
+    color: white;
+
+    button{
+        background-color: white;
+        color:$colorText12;
+    }
+
+    .ms_price-num-absol{
+        color: #FFFFFF;
+        opacity: 0.1;
+    }
+}
+
 </style>
