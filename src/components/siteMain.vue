@@ -111,16 +111,27 @@
             <div class="container ms_pricing-cards-cont">
                 <div class="row">
                     <div class="col-4 w-100 d-flex">
-                        <PricingCard v-for="(card, index) in pricingCards" :key="index"
-                        :class="addSpecialClass(index)"
-                        :singlePricingCard="card"
-                    />
-                        
-                        
+                        <PricingCard v-for="(card, index) in pricingCards" :key="index" :class="addSpecialClass(index)"
+                            :singlePricingCard="card" />
+
+
                     </div>
                 </div>
             </div>
 
+        </section>
+
+        <!-- latest posts section  -->
+        <section class="ms_posts-section">
+            <div class="container ms_posts-container">
+
+                <div class="ms_pricing-txt">
+                    <span>Price List</span>
+                    <h2 class="text-dark"> <span class="ms_bolder-txt">Our</span> Pricing </h2>
+                    <span class="ms_pricing-span-sizing text-dark">When, while the lovely valley teems with vapour around meanthe while the lovely valley teems with vapou</span>
+                </div>
+
+            </div>
         </section>
 
     </main>
@@ -134,9 +145,9 @@ import PricingCard from './pricingCard.vue'
 export default {
     name: 'siteMain',
     components: {
-    whatWeDoCard,
-    carouselCard,
-    PricingCard
+        whatWeDoCard,
+        carouselCard,
+        PricingCard
     },
 
     data: function () {
@@ -208,7 +219,7 @@ export default {
         addSpecialClass(indexActive) {
             let cssClass = '';
 
-            if (indexActive === 1){
+            if (indexActive === 1) {
                 cssClass = 'special';
             }
 
@@ -361,11 +372,11 @@ section.ms_carousel-bg {
 
 }
 
-.ms_pricing-cards-cont{
+.ms_pricing-cards-cont {
     position: absolute;
     top: 260px;
     left: 10%;
-    
+
 }
 
 .ms_pricing-txt {
@@ -397,4 +408,13 @@ section.ms_carousel-bg {
     }
 }
 
+// POSTS SECTION 
+
+.ms_posts-section{
+    background-color: #F0F0F0;
+
+    .ms_posts-container{
+        padding-top: 400px;
+    }
+}
 </style>
