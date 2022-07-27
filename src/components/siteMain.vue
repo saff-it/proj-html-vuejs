@@ -16,7 +16,7 @@
                     :singleCardWeDo="card" />
                 </div>
 
-                <button>View All Services</button>
+                <button class="ms-wwd-btn">View All Services</button>
 
             </div>
         </section>
@@ -54,8 +54,26 @@
         <!-- latest work carousel  -->
         <section class="ms_carousel-bg">
             <div class="container">
+
                 <div class="ms_carousel-bar">
 
+                    <div class="ms_carousel-bar-txt">
+                        <span>Portfolio</span>
+                        <h2> <span class="ms_bolder-txt">latest</span> work </h2>
+
+                    </div>
+
+                    <div class="ms_carousel-bar-btns align-self-end">
+
+                        <div class="ms_caro-btn-lft me-4">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+
+                        <div class="ms_caro-btn-rgt">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                    </div>
                 </div>
 
                 
@@ -169,7 +187,7 @@ div.container {
     }
 }
 
-button {
+button.ms-wwd-btn {
     @include buttonLayout;
     background-color: $colorText9;
     width: 12%;
@@ -213,9 +231,48 @@ button.ms_btn-right {
 }
 
 
+// CAROUSEL SECTION 
+
 section.ms_carousel-bg{
     background-color: $colorText3;
 }
+
+.ms_carousel-bar{
+    width: 100%;
+    margin: 110px 0 40px 0;
+    @include displayFlex;
+
+
+    span:first-child {
+        color: $colorText9;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 400;
+
+        span.ms_bolder-txt {
+            font-weight: 900;
+            color: black;
+        }
+    }
+}
+
+.ms_carousel-bar-btns{
+    @include displayFlex;
+
+    .ms_caro-btn-lft,
+    .ms_caro-btn-rgt{
+        font-size: 0.9rem;
+        border: 1px solid $colorText9;
+        color: $colorText9;
+        padding: 10px 14px;
+        border-radius: 50%;
+        
+    }
+
+}
+
 
 
 </style>
