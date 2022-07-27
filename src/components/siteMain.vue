@@ -90,8 +90,19 @@
                     <i class="fa-solid fa-circle"></i>
                 </div>
 
-
             </div>
+
+        </section>
+
+        <!-- pricing section  -->
+        <section class="ms_pricing-bg">
+
+            <div class="ms_pricing-txt">
+                <span>Price List</span>
+                <h2> <span class="ms_bolder-txt text-white">Our</span> Pricing </h2>
+                <span class="ms_pricing-span-sizing">When, while the lovely valley teems with vapour around meand the  while the lovely valley teems with vapou</span>
+            </div>
+
 
         </section>
 
@@ -167,9 +178,8 @@ export default {
 @import "../styles/mixins.scss";
 
 div.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include displayFlexToColumn;
+
 }
 
 // WHAT WE DO SECTION
@@ -280,7 +290,6 @@ section.ms_carousel-bg {
 
 }
 
-
 .ms_carousel-slider {
     margin: 50px 0 40px 0;
     color: $colorBg2;
@@ -291,7 +300,46 @@ section.ms_carousel-bg {
     }
 }
 
-.ms_carousel-slider i:first-child{
+.ms_carousel-slider i:first-child {
     color: $colorText9;
 }
+
+
+// PRICING SECTION 
+
+.ms_pricing-bg{
+    background-color: $colorBg9;
+
+}
+
+.ms_pricing-txt {
+    @include displayFlexToColumn;
+    color: white;
+    padding: 60px 0;
+    
+
+    span:first-child {
+        color: $colorText9;
+    }
+
+   .ms_pricing-span-sizing{
+    font-size: 0.8rem;
+    width: 45%;
+    text-align: center;
+    
+   }
+
+    h2 {
+        font-size: 3rem;
+        margin: 10px;
+        font-weight: 400;
+
+        span.ms_bolder-txt {
+            font-weight: 900;
+            color: black;
+        }
+    }
+}
+
+
 </style>
