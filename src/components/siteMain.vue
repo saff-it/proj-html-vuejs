@@ -52,7 +52,7 @@
         </section>
 
         <!-- latest work carousel  -->
-        <section>
+        <section class="ms_carousel-bg">
             <div class="container">
                 <div class="ms_carousel-bar">
 
@@ -92,19 +92,19 @@ export default {
 
                 {
                     title: 'Data Analysis',
-                    pic: "require(../assets/img/Group-247.png)",
+                    pic: "Group-247.png",
                 },
                 {
                     title: 'SEO Optimization',
-                    pic: '../assets/img/Group-567.png',
+                    pic: 'Group-567.png',
                 },
                 {
                     title: 'Security Data',
-                    pic: '../assets/img/Group-538.png',
+                    pic: 'Group-538.png',
                 },
                 {
                     title: 'Branding Strategy',
-                    pic: '../assets/img/Group-566.png',
+                    pic: 'Group-566.png',
                 },
 
             ],
@@ -112,17 +112,17 @@ export default {
             carouselCards: [
 
                 {
-                    img: '../assets/img/8wa60okr-1-790x576.jpg',
+                    img: '8wa60okr-1-790x576.jpg',
                     title: "Basket of Flower on table",
                     type: "Branding Strategy",
                 },
                 {
-                    img: '../assets/img/DRY-1-790x576.jpg',
+                    img: 'DRY-1-790x576.jpg',
                     title: "Purinky Products",
                     type: "Digital Experience",
                 },
                 {
-                    img: '../assets/img/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
+                    img: 'a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
                     title: "Satisfy Poster",
                     type: "Branding Strategy",
                 },
@@ -212,6 +212,10 @@ button.ms_btn-right {
     background-color: $colorBg3;
 }
 
+
+section.ms_carousel-bg{
+    background-color: $colorText3;
+}
 
 
 </style>

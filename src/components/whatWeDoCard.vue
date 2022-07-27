@@ -1,7 +1,7 @@
 <template>
     <div class="col-3">
 
-        <img class="w-50" :src="singleCardWeDo.pic" :alt="singleCardWeDo.title">
+        <img class="w-50" :src="require(`../assets/img/${singleCardWeDo.pic}`)" :alt="singleCardWeDo.title">
         <h5>{{singleCardWeDo.title}}</h5>
         <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
 
