@@ -25,11 +25,11 @@
             <div class="container ms_hero">
                 <div class="row align-items-center">
 
-                    <div class="col-7">
+                    <div class="col-7 ms_grow-img">
                         <img src="../assets/img/men-data.png" alt="Hero pic">
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-5 ms_grow-txt">
 
                         <div class="ms_title-txt text-white">
                             <span>Start your Project</span>
@@ -45,14 +45,38 @@
                             <button class="ms_btn-right">Explore More</button>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </section>
 
         <!-- latest work carousel  -->
         <section>
-            
+            <div class="container">
+                <div class="ms_carousel-bar">
+
+                </div>
+
+                
+                <div class="row ms_carousel-cards">
+
+                    <div class="col-4 ms_carousel-card">
+
+                        <div class="ms_card-img">
+                            <img class="w-100" src="../assets/img/8wa60okr-1-790x576.jpg" alt="">
+                        </div>
+
+                        <div class="ms_card-txt">
+                            <span class="ms_card-txt-sx">Basket of Flower on table</span>
+                            <span class="ms_card-txt-dx">Branding Strategy</span>
+                        </div>
+
+                    </div>
+                </div>
+               
+
+            </div>
+
         </section>
 
     </main>
@@ -75,7 +99,7 @@ export default {
 
                 {
                     title: 'Data Analysis',
-                    pic: '../assets/img/Group-247.png',
+                    pic: "require(../assets/img/Group-247.png)",
                 },
                 {
                     title: 'SEO Optimization',
@@ -142,22 +166,22 @@ button {
 
 // GROW YOUR BUSINESS SECTION
 
-section.ms_grow-business{
+section.ms_grow-business {
     background-color: $colorBg9;
 }
 
-.col-5 div.ms_title-txt span{
+div.ms_title-txt span {
     font-size: 0.8rem;
 }
 
-.col-5 p {
+.ms_grow-txt p {
     color: $colorBg3;
     width: 60%;
     font-size: 0.7rem;
     margin: 30px 0;
 }
 
-.col-7 img {
+.ms_grow-img img {
     transform: scale(60%)
 }
 
@@ -173,6 +197,37 @@ button.ms_btn-left {
 
 button.ms_btn-right {
     background-color: $colorBg3;
+}
+
+
+// CAROUSEL SECTION
+
+.ms_card-img img{
+    border-radius: 20px;
+}
+
+.ms_card-txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ms_card-txt-sx{
+        padding: 25px;
+        font-weight: bold;
+    }
+
+    .ms_card-txt-dx{
+        padding: 20px;
+        font-size: 0.9rem;
+        color: $colorText11;
+    }
+}
+
+.ms_carousel-card{
+    background-color: $colorBg2;
+    padding: 0;
+    border-radius: 25px;
+
 }
 
 </style>
