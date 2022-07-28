@@ -165,18 +165,18 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-4">
+                    <div class="col-4 ms_testimonial-container">
 
                         <div class="ms_avatar-box">
-                            <img src="" alt="">
+                            <img class="w-100" src="../assets/img/philipe-cavalcante-539505-unsplash-1024x1024.png" alt="">
                         </div>
 
                         <div class="ms_stars-box">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star ms_full-star "></i>
+                            <i class="fa-solid fa-star ms_full-star"></i>
+                            <i class="fa-solid fa-star ms_full-star"></i>
+                            <i class="bi bi-star ms_empty-star"></i>
+                            <i class="bi bi-star ms_empty-star"></i>
                         </div>
 
                         <p>When, while the lovely valley teems with vapour
@@ -184,8 +184,11 @@
 
                         <span>Michkel Angel</span>
                         <span>Marketing Manager</span>
-                        
+
                     </div>
+
+                    
+                
                 </div>
             </div>
 
@@ -518,4 +521,29 @@ section.ms_carousel-bg {
 .ms_testimonial-section{
     background-color: $colorText3;
 }
+
+.ms_testimonial-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ms_avatar-box{
+        width: 25%;
+        border: 5px solid $colorText12;
+        border-radius: 50%;
+        margin-bottom: 40px;
+    }
+
+    .ms_stars-box i.ms_full-star{
+        color: $colorText9;
+    }
+
+    .ms_stars-box i.ms_empty-star{
+        color: $colorText9;
+        
+    }
+}
+
+
+
 </style>
