@@ -148,6 +148,7 @@
         <!-- testimonial section  -->
         <section class="ms_testimonial-section">
 
+            <!-- section's text  -->
             <div class="container ms_posts-text pt-5">
 
                 <div class="ms_pricing-txt">
@@ -159,17 +160,33 @@
 
             </div>
 
+            <!-- section's cards  -->
             <div class="container pt-5">
                 <div class="row">
                     <testimonialCard v-for="(card, index) in testimonialCards" :key="index" :testimonialCard="card" />
                 </div>
             </div>
 
+            <!-- section's logos  -->
             <div class="container ms_partners-logo">
                 <partnersLogoCard v-for="(logo, index) in partnersLogos" :key="index"
                 :singleLogo="logo"
-            />
-                
+            />        
+            </div>
+
+            <!-- section's subrscire bar  -->
+            <div class="container ms_subscribe-bar">
+                <div class="ms_bar-txt">
+                    <h2>We Offer Awesome Services</h2>
+                    <p>When, while the lovely valley teems with vapour
+                        around meanthe while the lovely valley teems</p>
+                </div>
+
+                <div class="ms_bar-input">
+                    <input type="text">
+                    <button>Subscribe</button>
+                </div>
+
             </div>
             
 
