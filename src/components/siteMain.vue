@@ -418,7 +418,7 @@ export default {
 
 button.ms-wwd-btn {
     @include buttonLayout;
-    background-color: $colorText9;
+    @include gradientRed;
     width: 12%;
     margin-top: 150px;
     margin-bottom: 90px;
@@ -452,11 +452,11 @@ div.ms_title-txt span {
 }
 
 button.ms_btn-left {
-    background-color: $colorText9;
+    @include gradientRed;
 }
 
 button.ms_btn-right {
-    background-color: $colorBg3;
+    @include gradientBlue;
 }
 
 
@@ -589,7 +589,7 @@ section.ms_carousel-bg {
 
 .ms_subscribe-bar {
     @include displayFlex;
-    background-color: $colorText12;
+    @include gradientRed;
     padding: 55px 30px;
     border-radius: 20px;
     position: absolute;

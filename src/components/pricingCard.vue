@@ -124,7 +124,7 @@ export default {
 
     button{
     @include buttonLayout;
-    background-color: $colorText9;
+    background-color: $colorText12;
 
     }
 
@@ -140,7 +140,7 @@ export default {
 }
 
 .special{
-    background-color: $colorText12;
+    background-image: linear-gradient(to bottom right, $colorText12 , $colorText9);
     color: white;
 
     button{

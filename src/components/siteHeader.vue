@@ -56,8 +56,6 @@
 
 <script>
 
-
-
 export default {
 
     name: 'siteHeader',
@@ -140,7 +138,8 @@ nav.ms_top-header {
 
     button {
         @include buttonLayout;
-        background-color: $colorBg3;
+        @include gradientBlue;
+
     }
 }
 
@@ -167,11 +166,13 @@ nav.ms_top-header {
 }
 
 button.ms_btn-left {
-    background-color: $colorText9;
+    @include gradientRed;
+
 }
 
 button.ms_btn-right {
-    background-color: $colorBg3;
+    @include gradientBlue;
+
 }
 
 </style>
