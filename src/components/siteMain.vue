@@ -140,6 +140,7 @@
                     <postCard v-for="(card, index) in postCards" :key="index"
                     :singlePostCard="card"
                     :class="addSpecialClassToPost(index)"
+
                 />
                 </div>
             </div>
@@ -422,7 +423,7 @@ section.ms_carousel-bg {
 .ms_pricing-cards-cont {
     position: absolute;
     top: 260px;
-    left: 16%;
+    left: 265px;
 
 }
 
@@ -462,7 +463,8 @@ section.ms_carousel-bg {
     
 
     .ms_posts-text {
-        padding-top: 400px;
+        padding-top: 350px;
+        padding-bottom: 30px;
     }
 }
 
