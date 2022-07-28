@@ -555,11 +555,17 @@ section.ms_carousel-bg {
     }
 }
 
+// COMPANY LOGOS SECTIOM 
+
+.ms_partners-logo{
+    padding-bottom: 120px;
+}
 
 // TESTIMONIAL SECTION 
 
 .ms_testimonial-section {
     background-color: $colorText3;
+    position: relative;
 
 }
 
@@ -568,6 +574,9 @@ section.ms_carousel-bg {
     background-color: $colorText12;
     padding: 55px 30px;
     border-radius: 20px;
+    position: absolute;
+    bottom: -85px;
+    left: 180px;
 
 
     .ms_bar-txt {

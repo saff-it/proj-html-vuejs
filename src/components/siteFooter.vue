@@ -1,7 +1,7 @@
 <template>
   <footer>
 
-    <!-- top header  -->
+    <!-- top footer  -->
     <section class="ms_footer-section">
       <div class="container">
         <div class="row">
@@ -51,6 +51,23 @@
 
 
 
+        </div>
+      </div>
+    </section>
+
+    <!-- bottom footer  -->
+    <section class="ms_footer-section-bottom">
+      <div class="container ms_bottom-footer-container">
+
+        <div>
+          © 2022 Simone. All Rights Reserved.
+        </div>
+
+        <div class="bottom-footer-rgt">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
         </div>
       </div>
     </section>
@@ -130,6 +147,7 @@ export default {
 
 .ms_footer-section {
   background-color: $colorBg9;
+  
 
   .container {
     padding-top: 180px;
@@ -222,4 +240,29 @@ export default {
   }
 
 }
+
+// BOTTOM FOOTER 
+
+.ms_footer-section-bottom{
+  background-color: $colorBg9;
+  border-top: 0.5px solid $colorBg3;
+
+  .ms_bottom-footer-container{
+    @include displayFlex;
+    color: $colorText11;
+    font-size: 0.7rem;
+    height: 40px;
+
+  .bottom-footer-rgt i{
+    margin: 0 10px;
+    color: white;
+  }
+
+
+  }
+
+}
+
+
+
 </style>
