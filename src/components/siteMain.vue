@@ -137,11 +137,8 @@
 
             <div class="container ms_posts-box pb-5">
                 <div class="row">
-                    <postCard v-for="(card, index) in postCards" :key="index"
-                    :singlePostCard="card"
-                    :class="addSpecialClassToPost(index)"
-
-                />
+                    <postCard v-for="(card, index) in postCards" :key="index" :singlePostCard="card"
+                        :class="addSpecialClassToPost(index)" />
                 </div>
             </div>
 
@@ -164,12 +161,17 @@
 
             <div class="container pt-5">
                 <div class="row">
-                    <testimonialCard v-for="(card, index) in testimonialCards" :key="index"
-                    :testimonialCard="card"
-                />
-
+                    <testimonialCard v-for="(card, index) in testimonialCards" :key="index" :testimonialCard="card" />
                 </div>
             </div>
+
+            <div class="container ms_partners-logo">
+                <partnersLogoCard v-for="(logo, index) in partnersLogos" :key="index"
+                :singleLogo="logo"
+            />
+                
+            </div>
+            
 
         </section>
 
@@ -183,6 +185,7 @@ import carouselCard from './carouselCard.vue'
 import PricingCard from './pricingCard.vue'
 import postCard from './postCard.vue'
 import testimonialCard from './testimonialCard.vue'
+import partnersLogoCard from './partnersLogoCard.vue'
 
 export default {
     name: 'siteMain',
@@ -192,6 +195,7 @@ export default {
         PricingCard,
         postCard,
         testimonialCard,
+        partnersLogoCard,
     },
 
     data: function () {
@@ -271,7 +275,7 @@ export default {
                     title: 'Shabnam Dhillion, wife of RSSb chief Gurinder Dhollon, passes away London',
                     paragraph: "When, while with le the lovely valley teems with vapouaround meand the",
                 },
-                
+
             ],
 
             testimonialCards: [
@@ -291,7 +295,27 @@ export default {
                     name: "Paola Perego",
                     job: "SEO Specialist",
                 },
-                
+
+            ],
+
+            partnersLogos: [
+
+                {
+                    img: 'client-1-1.png',
+                },
+                {
+                    img: 'clienty-2.png',
+                },
+                {
+                    img: 'clienty-3.png',
+                },
+                {
+                    img: 'clienty-4.png',
+                },
+                {
+                    img: 'client-5.png',
+                },
+
             ],
         }
     },
@@ -330,7 +354,7 @@ export default {
 @import "../styles/variables.scss";
 @import "../styles/mixins.scss";
 
-.container.ms_we-do-container{
+.container.ms_we-do-container {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -508,7 +532,7 @@ section.ms_carousel-bg {
 
 .ms_posts-section {
     background-color: $colorText3;
-    
+
 
     .ms_posts-text {
         padding-top: 350px;
@@ -519,9 +543,8 @@ section.ms_carousel-bg {
 
 // TESTIMONIAL SECTION 
 
-.ms_testimonial-section{
+.ms_testimonial-section {
     background-color: $colorText3;
+
 }
-
-
 </style>
