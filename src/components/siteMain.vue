@@ -162,33 +162,12 @@
 
             </div>
 
-            <div class="container">
+            <div class="container pt-5">
                 <div class="row">
+                    <testimonialCard v-for="(card, index) in testimonialCards" :key="index"
+                    :testimonialCard="card"
+                />
 
-                    <div class="col-4 ms_testimonial-container">
-
-                        <div class="ms_avatar-box">
-                            <img class="w-100" src="../assets/img/philipe-cavalcante-539505-unsplash-1024x1024.png" alt="">
-                        </div>
-
-                        <div class="ms_stars-box">
-                            <i class="fa-solid fa-star ms_full-star "></i>
-                            <i class="fa-solid fa-star ms_full-star"></i>
-                            <i class="fa-solid fa-star ms_full-star"></i>
-                            <i class="bi bi-star ms_empty-star"></i>
-                            <i class="bi bi-star ms_empty-star"></i>
-                        </div>
-
-                        <p>When, while the lovely valley teems with vapour
-                        around meanthe while the lovely valley teems with vapou</p>
-
-                        <span>Michkel Angel</span>
-                        <span>Marketing Manager</span>
-
-                    </div>
-
-                    
-                
                 </div>
             </div>
 
@@ -203,6 +182,7 @@ import whatWeDoCard from './whatWeDoCard.vue'
 import carouselCard from './carouselCard.vue'
 import PricingCard from './pricingCard.vue'
 import postCard from './postCard.vue'
+import testimonialCard from './testimonialCard.vue'
 
 export default {
     name: 'siteMain',
@@ -211,6 +191,7 @@ export default {
         carouselCard,
         PricingCard,
         postCard,
+        testimonialCard,
     },
 
     data: function () {
@@ -289,6 +270,26 @@ export default {
                 {
                     title: 'Shabnam Dhillion, wife of RSSb chief Gurinder Dhollon, passes away London',
                     paragraph: "When, while with le the lovely valley teems with vapouaround meand the",
+                },
+                
+            ],
+
+            testimonialCards: [
+
+                {
+                    img: 'szabo-viktor-1266895-unsplash-1024x1024.png',
+                    name: "Michkel Angel",
+                    job: "Marketing Manager",
+                },
+                {
+                    img: 'philipe-cavalcante-539505-unsplash-1024x1024.png',
+                    name: "Maria Dolores",
+                    job: "Projecy Manager",
+                },
+                {
+                    img: 'fabio-spinelli-695744-unsplash-1024x1024.png',
+                    name: "Paola Perego",
+                    job: "SEO Specialist",
                 },
                 
             ],
@@ -521,29 +522,6 @@ section.ms_carousel-bg {
 .ms_testimonial-section{
     background-color: $colorText3;
 }
-
-.ms_testimonial-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .ms_avatar-box{
-        width: 25%;
-        border: 5px solid $colorText12;
-        border-radius: 50%;
-        margin-bottom: 40px;
-    }
-
-    .ms_stars-box i.ms_full-star{
-        color: $colorText9;
-    }
-
-    .ms_stars-box i.ms_empty-star{
-        color: $colorText9;
-        
-    }
-}
-
 
 
 </style>

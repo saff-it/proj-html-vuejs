@@ -5,8 +5,8 @@
         <div class="ms_post-card">
             <div class="mt-3 ms_txt-post">
                 <span>April 21, 2019 - Paul</span>
-                <h6>Clearing Corporations get SEBI nod to invest in overnight funds</h6>
-                <p>When, while with le the lovely valley teems with vapouaround meand the</p>
+                <h6>{{singlePostCard.title}}</h6>
+                <p>{{singlePostCard.paragraph}}</p>
             </div>
 
             <div>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-
+    props: ['singlePostCard'],
 }
 </script>
 
@@ -82,7 +82,7 @@ export default {
         background-image: url('../assets/img/headway-537308-unsplash-1380x703.jpg');
         background-size: cover;
         color: white;
-        padding: 25px 40px;
+        padding: 25px 100px 25px 40px;
         margin: 0 5px;
         border-radius: 20px;
 
@@ -97,7 +97,7 @@ export default {
         }
 
         p {
-            width: 90%;
+            width: 100%;
             text-align: left;
             font-size: 0.7rem;
             margin: 0;
