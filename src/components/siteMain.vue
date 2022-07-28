@@ -27,22 +27,9 @@
                         <img src="../assets/img/men-data.png" alt="Hero pic">
                     </div>
 
-                    <div class="col-5 ms_grow-txt">
-
-                        <div class="ms_title-txt text-white">
-                            <span>Start your Project</span>
-                            <h1 class="fw-bolder mt-3">Grow your Business</h1>
-                            <h1 class="fw-lighter">With our Strategy</h1>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, odit deserunt cum veniam
-                            quaerat quisquam eos.</p>
-
-                        <div class="ms_hero-btns">
-                            <button class="ms_btn-left">Try it Now</button>
-                            <button class="ms_btn-right">Explore More</button>
-                        </div>
-                    </div>
+                    <heroTextBlock v-for="(item, index) in growTextItems" :key="index"
+                                :textItem="item"
+                    />
 
                 </div>
             </div>
@@ -189,6 +176,7 @@ import postCard from './postCard.vue'
 import testimonialCard from './testimonialCard.vue'
 import partnersLogoCard from './partnersLogoCard.vue'
 import blockItems from './blockItems.vue'
+import heroTextBlock from './heroTextBlock.vue'
 
 export default {
     name: 'siteMain',
@@ -200,6 +188,7 @@ export default {
         testimonialCard,
         partnersLogoCard,
         blockItems,
+        heroTextBlock,
     },
 
     data: function () {
@@ -237,6 +226,15 @@ export default {
                     special: false,
                 },
 
+            ],
+
+            growTextItems: [
+                {
+                    pretitle: 'Start Your Project',
+                    h1A: 'Grow Your Business',
+                    h1B: 'With Our Strategy',
+                    h1C: '',
+                }, 
             ],
 
             carouselCards: [
@@ -434,12 +432,6 @@ div.ms_title-txt span {
     font-size: 0.8rem;
 }
 
-.ms_grow-txt p {
-    color: $colorBg3;
-    width: 60%;
-    font-size: 0.7rem;
-    margin: 30px 0;
-}
 
 .ms_grow-img img {
     transform: scale(60%)
