@@ -28,11 +28,17 @@ export default {
 @import "../styles/variables.scss";
 @import "../styles/mixins.scss";
 
-.ms_carousel-card:hover{
+.ms_carousel-card{
+    transition: all 0.5s ease-in-out;
+
+    &:hover{
     @include gradientRed;
     cursor: pointer;
     color: white;
 }
+
+}
+
 
 .ms_card-img img{
     border-radius: 20px;
