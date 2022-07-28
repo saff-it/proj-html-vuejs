@@ -135,7 +135,7 @@
             </div>
 
 
-            <div class="container ms_posts-box">
+            <div class="container ms_posts-box pb-5">
                 <div class="row">
                     <postCard v-for="(card, index) in postCards" :key="index"
                     :singlePostCard="card"
@@ -147,6 +147,50 @@
 
 
         </section>
+
+        <!-- testimonial section  -->
+        <section class="ms_testimonial-section">
+
+            <div class="container ms_posts-text pt-5">
+
+                <div class="ms_pricing-txt">
+                    <span>Testimonial</span>
+                    <h2 class="text-dark"> <span class="ms_bolder-txt">What</span> People Say </h2>
+                    <span class="ms_pricing-span-sizing text-dark">When, while the lovely valley teems with vapour
+                        around meanthe while the lovely valley teems with vapou</span>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-4">
+
+                        <div class="ms_avatar-box">
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="ms_stars-box">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p>When, while the lovely valley teems with vapour
+                        around meanthe while the lovely valley teems with vapou</p>
+
+                        <span>Michkel Angel</span>
+                        <span>Marketing Manager</span>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
 
     </main>
 </template>
@@ -459,7 +503,7 @@ section.ms_carousel-bg {
 // POSTS SECTION 
 
 .ms_posts-section {
-    background-color: #F0F0F0;
+    background-color: $colorText3;
     
 
     .ms_posts-text {
@@ -468,4 +512,10 @@ section.ms_carousel-bg {
     }
 }
 
+
+// TESTIMONIAL SECTION 
+
+.ms_testimonial-section{
+    background-color: $colorText3;
+}
 </style>
