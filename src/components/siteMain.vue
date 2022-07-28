@@ -169,9 +169,7 @@
 
             <!-- section's logos  -->
             <div class="container ms_partners-logo">
-                <partnersLogoCard v-for="(logo, index) in partnersLogos" :key="index"
-                :singleLogo="logo"
-            />        
+                <partnersLogoCard v-for="(logo, index) in partnersLogos" :key="index" :singleLogo="logo" />
             </div>
 
             <!-- section's subrscire bar  -->
@@ -183,12 +181,12 @@
                 </div>
 
                 <div class="ms_bar-input">
-                    <input type="text">
+                    <input type="text" placeholder="Enter your Email Address">
                     <button>Subscribe</button>
                 </div>
 
             </div>
-            
+
 
         </section>
 
@@ -562,6 +560,53 @@ section.ms_carousel-bg {
 
 .ms_testimonial-section {
     background-color: $colorText3;
+
+}
+
+.ms_subscribe-bar {
+    @include displayFlex;
+    background-color: $colorText12;
+    padding: 55px 30px;
+    border-radius: 20px;
+
+
+    .ms_bar-txt {
+        color: white;
+
+        p {
+            margin: 0;
+            font-size: 0.8rem;
+            font-weight: lighter;
+        }
+    }
+
+    .ms_bar-input{
+        @include displayFlex;
+        background-color: white;
+        height: 40px;
+        width: 30%;
+        border-radius: 20px;
+
+        input{
+            border: none;
+            font-size: 0.8rem;
+            margin-left: 20px;
+
+            &::placeholder{
+                color: $colorText6;
+
+            }
+        }
+
+        button{
+           @include buttonLayout;
+           background-color: $colorText8; 
+           margin-right: 3px;
+
+        }
+    }
+
+
 
 }
 </style>
