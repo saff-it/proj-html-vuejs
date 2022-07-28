@@ -9,7 +9,7 @@
         </div>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, odit deserunt cum veniam
-            quaerat quisquam eos.</p>
+            quaerat quisquam</p>
 
         <div class="ms_hero-btns">
             <button class="ms_btn-left">Try it Now</button>
@@ -35,13 +35,17 @@ export default {
 
 .col-5 p {
     color: $colorBg3;
-    width: 60%;
-    font-size: 0.7rem;
+    width: 70%;
+    font-size: 0.9rem;
     margin: 30px 0;
 }
 
 .col-7 img {
     transform: scale(95%)
+}
+
+.col-5 div.text-white h1{
+    font-size: 3rem;
 }
 
 .ms_hero-btns button {
