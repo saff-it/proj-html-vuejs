@@ -38,7 +38,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: left;
-        background-color: $colorBg9;
+        background-image: linear-gradient(to bottom right, $colorBg9 , $colorBg9, #1947b3 );
         color: white;
         padding: 25px 40px;
         margin: 0 5px;
