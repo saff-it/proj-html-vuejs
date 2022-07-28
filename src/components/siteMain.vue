@@ -5,11 +5,9 @@
         <section>
             <div class="container ms_we-do-container">
 
-                <div class="ms_upper-txt">
-                    <span>Our Services</span>
-                    <h2> <span class="ms_bolder-txt">What</span> We Do </h2>
-                    <span>When, while the lovely valley teems with vapour around meand the</span>
-                </div>
+                <blockItems v-for="(item, index) in wwdBlockItems" :key="index"
+                            :singleItem="item"
+                />
 
                 <div class="row">
                     <whatWeDoCard v-for="(card, index) in whatWeDoCards" :key="index" :singleCardWeDo="card" />
@@ -99,12 +97,9 @@
 
             <div class="container">
 
-                <div class="ms_pricing-txt">
-                    <span>Price List</span>
-                    <h2> <span class="ms_bolder-txt text-white">Our</span> Pricing </h2>
-                    <span class="ms_pricing-span-sizing">When, while the lovely valley teems with vapour around meand
-                        the while the lovely valley teems with vapou</span>
-                </div>
+                <blockItems v-for="(item, index) in priceBlockItems" :key="index"
+                            :singleItem="item"        
+                />
 
             </div>
 
@@ -124,14 +119,9 @@
         <section class="ms_posts-section">
 
             <div class="container ms_posts-text">
-
-                <div class="ms_pricing-txt">
-                    <span>Blog</span>
-                    <h2 class="text-dark"> <span class="ms_bolder-txt">Latest</span> Posts </h2>
-                    <span class="ms_pricing-span-sizing text-dark">When, while the lovely valley teems with vapour
-                        around meanthe while the lovely valley teems with vapou</span>
-                </div>
-
+                <blockItems v-for="(item, index) in postsBlockItems" :key="index"
+                            :singleItem="item"
+                />
             </div>
 
 
@@ -149,14 +139,11 @@
         <section class="ms_testimonial-section">
 
             <!-- section's text  -->
-            <div class="container ms_posts-text pt-5">
+            <div class="container ms_posts-text">
 
-                <div class="ms_pricing-txt">
-                    <span>Testimonial</span>
-                    <h2 class="text-dark"> <span class="ms_bolder-txt">What</span> People Say </h2>
-                    <span class="ms_pricing-span-sizing text-dark">When, while the lovely valley teems with vapour
-                        around meanthe while the lovely valley teems with vapou</span>
-                </div>
+                <blockItems v-for="(item, index) in testimonialBlockItems" :key="index"
+                            :singleItem="item"
+                />
 
             </div>
 
@@ -201,6 +188,7 @@ import PricingCard from './pricingCard.vue'
 import postCard from './postCard.vue'
 import testimonialCard from './testimonialCard.vue'
 import partnersLogoCard from './partnersLogoCard.vue'
+import blockItems from './blockItems.vue'
 
 export default {
     name: 'siteMain',
@@ -211,11 +199,13 @@ export default {
         postCard,
         testimonialCard,
         partnersLogoCard,
+        blockItems,
     },
 
     data: function () {
         return {
 
+                        
             whatWeDoCards: [
 
                 {
@@ -233,6 +223,18 @@ export default {
                 {
                     title: 'Branding Strategy',
                     pic: 'Group-566.png',
+                },
+
+            ],
+
+            wwdBlockItems: [
+
+                {
+                    pretitle: 'Our Services',
+                    titleBold: 'What',
+                    titleLight: 'We Do',
+                    subtitle: "When, while the lovely valley teems with vapour around meand the",
+                    special: false,
                 },
 
             ],
@@ -276,6 +278,18 @@ export default {
                 },
             ],
 
+            priceBlockItems: [
+
+                {
+                    pretitle: 'Price List',
+                    titleBold: 'Our',
+                    titleLight: 'Pricing',
+                    subtitle: "When, while the lovely valley teems with vapour around meand the",
+                    special: true,
+                },
+
+            ],
+
             postCards: [
 
                 {
@@ -289,6 +303,18 @@ export default {
                 {
                     title: 'Shabnam Dhillion, wife of RSSb chief Gurinder Dhollon, passes away London',
                     paragraph: "When, while with le the lovely valley teems with vapouaround meand the",
+                },
+
+            ],
+
+            postsBlockItems: [
+
+                {
+                    pretitle: 'Blog',
+                    titleBold: 'Latest',
+                    titleLight: 'Posts',
+                    subtitle: "When, while the lovely valley teems with vapour around meand the while the lovely valley teems with vapou",
+                    special: false,
                 },
 
             ],
@@ -309,6 +335,19 @@ export default {
                     img: 'fabio-spinelli-695744-unsplash-1024x1024.png',
                     name: "Paola Perego",
                     job: "SEO Specialist",
+                },
+
+            ],
+
+            testimonialBlockItems: [
+
+                {
+                    pretitle: 'Testimonial',
+                    titleBold: 'What',
+                    titleLight: 'People Say',
+                    subtitle: "When, while the lovely valley teems with vapour around meand the while the lovely valley teems with vapou",
+                    special: false,
+
                 },
 
             ],
@@ -357,9 +396,8 @@ export default {
 
             return cssPostClass;
         }
+
     }
-
-
 
 }
 </script>
@@ -377,26 +415,6 @@ export default {
 }
 
 // WHAT WE DO SECTION
-
-.ms_upper-txt {
-    text-align: center;
-    margin: 70px;
-
-    span:first-child {
-        color: $colorText9;
-    }
-
-    h2 {
-        font-size: 3rem;
-        margin: 10px;
-        font-weight: 400;
-
-        span.ms_bolder-txt {
-            font-weight: 900;
-            color: black;
-        }
-    }
-}
 
 button.ms-wwd-btn {
     @include buttonLayout;
@@ -538,7 +556,7 @@ section.ms_carousel-bg {
 
         span.ms_bolder-txt {
             font-weight: 900;
-            color: black;
+            color: white;
         }
     }
 }

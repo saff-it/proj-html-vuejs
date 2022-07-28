@@ -35,7 +35,6 @@ export default {
 
 
 .col-4.ms_testimonial-container{
-    margin-top: 40px;
     padding: 0 60px;
     display: flex;
     flex-direction: column;
